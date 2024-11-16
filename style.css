@@ -1,0 +1,146 @@
+/* Asosiy sozlamalar */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #3C3D37;
+    color: #fff;
+}
+
+.container {
+    padding: 20px;
+    background-color: #181C14;
+    text-align: center;
+}
+
+h1 {
+    color: #FFD700;
+    font-size: 24px;
+}
+
+.main-profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+}
+
+.other-images {
+    display: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-box {
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: 150px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+}
+
+.show-images {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #181C14;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.show-images:hover {
+    background-color: #FFB000;
+}
+
+/* Animatsiya */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) { /* Planshetlar uchun */
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .other-images {
+        gap: 15px;
+    }
+
+    .image-box {
+        max-width: 120px;
+    }
+
+    .show-images {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobil qurilmalar uchun */
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .other-images {
+        gap: 10px;
+    }
+
+    .image-box {
+        max-width: 100px;
+    }
+
+    .show-images {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
